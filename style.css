@@ -1,0 +1,575 @@
+/* RESET CSS */
+*{
+    margin:0px;
+    padding:0px;
+    border:0px;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+ol, li, ol {
+    list-style: none;
+}
+/* CSS CODES */
+body{
+    background-color: rgb(8, 8, 8);
+    color:white;
+    width: 100vw;
+    height: 100vh;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+p {
+    color:rgb(181, 181, 181);
+}
+h1 {
+    color:rgb(220, 220, 220);
+}
+li {
+    color:rgb(181, 181, 181);
+}
+a {
+    color:whitesmoke;
+}
+/*-------------------------------------------------.container------------------------*/
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+/*-------------------------------------------------.container .left-menu------------------------*/
+.container .left-menu-button {
+    width: 50px;
+    height: 50px;
+    top:1%;
+    left:1%;
+    position: absolute;
+    border-radius: 50%;
+    color:whitesmoke;
+    cursor: pointer;
+    background-color:rgb(24, 106, 59);
+    transition:1s all;
+    animation:1.2s ThemeButtonAnmDark;
+}
+.container .left-menu-button:hover {
+    box-shadow: 0px 0px 50px white;
+}
+.container .left-menu {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color:rgb(0,0,0);
+    z-index:2;
+    top:1%;
+    left:1%;
+    visibility: hidden;
+    transition:300ms all;
+}
+.container .left-menu ul {
+    width: 100%;
+    transition: 100ms all;
+    visibility: hidden;
+    display: flex;
+    justify-content: space-around;
+}
+.container .left-menu ul:first-child li:first-child a {
+    margin-left:0px;
+}
+.container .left-menu ul:first-child li:last-child a {
+    margin-right:0px;
+}
+.container .left-menu ul li a::before,.container .left-menu ul li a::after {
+    content: "";
+    position: absolute;
+    bottom:-5%;
+    width: 0%;
+    height: 1px;
+    background-color:white;
+    transition:500ms all;
+}
+.container .left-menu ul li a::before {
+    left:0%;
+}
+.container .left-menu ul li a::after {
+    right:0%;
+}
+.container .left-menu ul li a {
+    font-size:40px;
+    display: block;
+    position: relative;
+}
+.container .left-menu ul li a:hover::before,.container .left-menu ul li a:hover::after {
+    width: 100%;
+}
+/*----------------.container .left-menu.clicked----------------*/
+.container .left-menu.clicked {
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+    top:0%;
+    left:0%;
+    z-index:2;
+    visibility: visible;
+}
+.container .left-menu ul.clicked {
+    visibility: visible;
+}
+.container .left-menu-button.clicked {
+    z-index: 4;
+}
+/*-------------------------------------------------.container button------------------------*/
+.container .ThemeModButtonClass {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    top:1%;
+    right:1%;
+    z-index:1;
+    border-radius: 50%;
+    background-color: white;
+    color:black;
+    transition: 1s all;
+    position: absolute;
+    text-align: center;
+    animation:1.2s ThemeButtonAnmDark;
+}
+.container .ThemeModButtonClass #darkModeIcon {
+    display: none;
+}
+.container .ThemeModButtonClass i {
+    font-size:28px;
+}
+.container .ThemeModButtonClass:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 50px white;
+}
+/*--------------------------------------------------------------- 
+///////////////////.container .leftSection//////////////////////
+----------------------------------------------------------------*/
+.container .leftSection{
+    width: 50%;
+    height: 100%;
+}
+/*---------------------------------------.container .leftSection .Profil---------------------*/
+.container .leftSection .Profil {
+    width: 70%;
+    margin-left:15%;
+    height: 35%;
+    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.container .leftSection .Profil img {
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.container .leftSection .Profil h1 {
+    font-size:35px;
+    font-weight: 400;
+}
+.container .leftSection .Profil p {
+    font-size:18px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+.container .leftSection .Profil h1 {
+    margin-top:10px;
+    font-size: 35px;
+}
+.container .leftSection .Profil p {
+    margin-top:5px;
+}
+/*---------------------------------------.container .leftSection .content---------------------*/
+.container .leftSection .content {
+    height: 25%;
+    margin-top:5%;
+    width: 100%;
+    background-color: rgb(16,16,16);    
+}
+.container .leftSection .content:hover h1::after {
+    width: 100%;
+    left:0%;
+}
+.container .leftSection .content:hover .CodeIcon i {
+    color:rgb(138, 198, 73);
+    transform:scale(1.1);
+}
+.container .leftSection .content:hover ul li {
+    color:white;
+}
+.container .leftSection .content h1 {
+    height: 15%;
+    text-align: center;
+    font-weight: lighter;
+    position: relative;
+}
+.container .leftSection .content h1::after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 1px;
+    background-color: wheat;
+    transition:500ms all;
+    bottom:-30%;
+    left:30%;
+}
+/*---------------------------------------.container .leftSection .content .CodeIcon---------------------*/
+.container .leftSection .content .CodeIcon{
+    display: flex;
+    margin-top:2.5%;
+    height: 35%;
+    align-items: center;
+    justify-content: center;
+}
+.container .leftSection .content .CodeIcon i {
+    font-size:50px;
+    transition:300ms all;
+}
+.container .leftSection .content ul {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.container .leftSection .content ul li {
+    font-size:25px;
+    font-weight: 300;
+    transition:1s all;
+}
+/*---------------------------------------.container .leftSection .content2---------------------*/
+.container .leftSection .content2 {
+    height: 20%;
+    margin-top:5%;
+    width: 100%;
+    background-color: rgb(16,16,16);
+    border-top:none;
+}
+.container .leftSection .content2:hover .CheckIcon i{
+    color:rgb(138, 198, 73);
+}
+.container .leftSection .content2:hover .text p {
+    color:white;
+}
+.container .leftSection .content2 .CheckIcon {
+    width: 100%;
+    height: 50%;
+    font-size:55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .leftSection .content2 .CheckIcon i {
+    transition: 300ms all;
+}
+.container .leftSection .content2 .text {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .leftSection .content2 .text p {
+    font-size:18px;
+    text-align: center;
+    font-weight: lighter;
+    transition:1s all;
+}
+/*---------------------------------------.container .leftSection footer---------------------*/
+footer {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+footer .SocialIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+footer .SocialIcon a {
+    font-size:28px;
+    margin-left:20px;
+    opacity: 0.5;
+    transition: 300ms all;
+    
+}
+footer .SocialIcon a:hover {
+    opacity: 1;
+    transform:scale(1.1);
+}
+footer .SocialIcon i:first-child {
+    margin-left:0px;
+}
+/*--------------------------------------------------------------- 
+///////////////////.container .rightSection//////////////////////
+----------------------------------------------------------------*/
+.container .rightSection{
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+.container .rightSection .RightSectionSlider {
+    width: 200%;
+    height: 100%;
+    position: relative;
+    animation:rightSectionSliderAnm 10s infinite;
+
+}
+.container .rightSection .RightSectionSlider .slider-item {
+    width: 100%;
+    height: 100%;
+    
+}
+.container .rightSection .RightSectionSlider .slider-item img{
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.1;
+    object-fit: cover;
+}
+/*-------------------------------------------------------------------
+/////////////////////////////////////ANIMATON/////////////////////////
+--------------------------------------------------------------------*/
+@keyframes loadSectionAnm {
+    0%{
+        visibility: visible;
+    }
+}
+@keyframes load-textAnm {
+    0% {
+        transform:rotate(-360deg);
+        opacity: 0.2;
+    }
+}
+@keyframes loadAnm {
+    0% {
+        transform:rotate(0deg);
+        opacity: 0.2;
+    }
+    50%{
+        opacity: 1;
+    }
+    100% {
+        transform:rotate(360deg);
+        opacity: 0.2;
+    }
+}
+@keyframes rightSectionSliderAnm {
+    0%{
+        transform: translateY(0%);
+    }
+    25%{
+        transform: translateY(-100%);
+    }
+    50%{
+        transform: translateY(-100%);
+    }
+    75%{
+        transform: translateY(-200%);
+    }
+    50%{
+        transform: translateY(-200%);
+    }
+
+}
+@keyframes ThemeButtonAnmDark {
+    0% {
+        box-shadow: 0px 0px 100px white;
+        background-color: rgb(8, 8, 8);
+        color: rgb(8, 8, 8);
+        transform:scale(10.5);
+    }
+    50%{
+        color:rgb(8, 8, 8);
+        background-color: rgb(8, 8, 8);
+    }
+}
+
+@keyframes ThemeButtonAnmLight {
+    0% {
+        box-shadow: 0px 0px 100px black;
+        background-color: white;
+        color: white;
+        transform:scale(10.5);
+    }
+    50%{
+        color:white;
+        background-color: white;
+    }
+}
+/*-------------------------------------------------------------------
+/////////////////////////////////////ThemeLightMods///////////////////
+--------------------------------------------------------------------*/
+/*.container button*/
+.container .ThemeModButtonClass.white{
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    top:1%;
+    right:1%;
+    z-index:1;
+    border-radius: 50%;
+    background-color: black;
+    color:white;
+    transition: 1s all;
+    position: absolute;
+    text-align: center;
+    animation:1.2s ThemeButtonAnmLight;
+}
+.container .ThemeModButtonClass.white #darkModeIcon {
+    display: block;
+}
+.container .ThemeModButtonClass.white #lightModeIcon {
+    display: none;
+}
+.container .ThemeModButtonClass.white:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 50px black;
+}
+/*.container .rightSection*/
+.container .rightSection .RightSectionSlider .slider-item img.white {
+    opacity: 1;
+}
+/*.container .leftSection*/ 
+.container .leftSection.white {
+    background-color: white;
+}
+/*.container .leftSection .content*/ 
+.container .leftSection .content.white{
+    background-color: rgb(177, 177, 177);
+}
+.container .leftSection .content2.white{
+    background-color: rgb(177, 177, 177);
+}
+.container .leftSection .content .CodeIcon i.white {
+    color:rgb(0,0,0);
+}
+.container .leftSection .content:hover .CodeIcon i.white {
+    color:rgb(138, 198, 73);
+}
+
+.container .leftSection .content2 .CheckIcon i.white {
+    color:rgb(0,0,0);
+}
+.container .leftSection .content2:hover .CheckIcon i.white {
+    color:rgb(138, 198, 73);
+}
+/*.container .leftSection .content li */ 
+.container .leftSection .content li.white {
+    color:rgb(56, 56, 56);
+}
+.container .leftSection .content:hover li.white {
+    color:rgb(0,0,0);
+}
+/*.container .leftSection .Profil*/ 
+.container .leftSection .Profil p.white {
+    color:rgb(56, 56, 56);
+}
+.container .leftSection .content2 p.white {
+    color:rgb(56, 56, 56);
+}
+.container .leftSection .content2:hover p.white {
+    color:rgb(0,0,0);
+}
+.container .leftSection  h1.white {
+    color:rgb(0,0,0);
+}
+/*.container .leftSection footer*/ 
+.container .leftSection footer .SocialIcon a.white{
+    color:rgb(0,0,0);
+}
+/*-------------------------------------------------------------------
+/////////////////////////////////////RESPONSİVE/////////////////////
+--------------------------------------------------------------------*/
+@media screen and (max-width:850px){
+    /*--------container--------*/
+    .container {
+        display: block;
+    }
+    /*--------container .lefSection--------*/
+    .container .leftSection {
+        width: 100%;
+    }
+    /*--------container .lefSection--------*/
+    .container .rightSection {
+        width: 100%;
+        margin-top:5%;
+    }
+    /*--------container .leftMenu--------*/
+     .container .left-menu {
+       flex-direction: column;  
+     }
+     .container .left-menu ul {
+        flex-direction: column; 
+        align-items: center;
+        justify-content: center;
+      }
+}
+@media screen and (max-width:535px){
+    /*------------.container button------------------*/
+    .container button {
+        width: 40px;
+        height: 40px;
+    }
+    /*------------.container .leftSection .Profil------------------*/
+    .container .leftSection .Profil img{
+        width:120px;
+        height: 120px;
+    }
+    .container .leftSection .Profil h1 {
+        font-size:28px;
+    }
+    /*--------------.container .leftSection .content -----------------*/
+    .container .leftSection .content ul li{
+        font-size:20px;
+    }
+    .container .leftSection .content .CodeIcon i {
+        font-size:45px;
+    }
+}
+@media screen and (max-width:400px) {   
+    /*--------------.container .leftSection .Profil -----------------*/ 
+    .container .leftSection .Profil h1 {
+        /*398 x 736*/
+        font-size:25px;
+    }
+    .container .leftSection .Profil p {
+        font-size:16px;
+    }
+    /*--------------.container .leftSection .content -----------------*/   
+    .container .leftSection .content h1 {
+        font-size:20px;
+    }
+    /*--------------.container .leftSection .content .CodeIcon -----------------*/   
+    .container .leftSection .content .CodeIcon i{
+        font-size:43px;
+    }
+    .container .leftSection .content ul li {
+        font-size:18px;
+    }
+    /*--------------.container .leftSection .content2 -----------------*/   
+    .container .leftSection .content2 .CheckIcon i {
+        font-size:52px;
+    }   
+    .container .leftSection .content2 .text p  {
+        font-size:16px;
+    }
+}
